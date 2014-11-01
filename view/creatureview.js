@@ -1,5 +1,5 @@
 var creatureview = Backbone.View.extend({
-    el:'#cards',
+    el:'#cards1',
     initialize: function(){
         this.render()
     },
@@ -18,5 +18,6 @@ var creatureview = Backbone.View.extend({
 
 var cardcreatureview = new creatureview({
     collection: hearthbasic
+    
 });
 
