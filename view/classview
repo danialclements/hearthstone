@@ -1,0 +1,6 @@
+var classview = Backbone.View.extend({
+    el: '#list',
+    initialize: function90{
+        this.render()
+    },
+})

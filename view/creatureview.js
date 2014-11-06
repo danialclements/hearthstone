@@ -18,6 +18,7 @@ var creatureview = Backbone.View.extend({
 
 var cardcreatureview = new creatureview({
     collection: hearthbasic
-    
+ 
+
 });
 
