@@ -1,7 +1,37 @@
 var creaturecollection = Backbone.Collection.extend({
     model: hearthcreatures,
+
+    initialize: function(){
+      this.sort_key = 'cost';
+      this.sort_keysecond = 'alphabet';
+    },
+
+    function comperatorfieldset(field1, field2, reverse1, reverse2){
+      var reverser1 = reverse1  ? -1 : 1;
+      var reverser2 = reverse2  ? -1: 1;
+
+    function comperator(a,b)
+    if(a.get(field1) > b.get(field1){
+      return 1*flip1
+    }
+    else if(a.get(field1) == b.get(field1){
+      if(a.get(field2) > b.get(field2)){
+        return 1*flip2;
+      }
+      else if(a.get(field2) > b.get(field2)){
+        return 0;
+      }
+      else{
+        return -1*flip2; //this is actually a.get(field2) < b.get(field2)
+      }
+    }
+    else{
+      return -1*flip1 //this is actually a.get(field1) < b.get(field1)
+    }
     
 })
+
+}
 var hearthbasic = new creaturecollection();
 var groups = {'Hunter':[],'Druid':[],'Mage':[],'Shaman':[],'Rogue':[], 'Priest':[],'Warlock':[],'Warrior':[],'Neutral':[],'All':[]}
 console.log(groups['Hunter'])
@@ -39,33 +69,8 @@ function createCollection(){
        }  
          }
     })
-function organize(field1, field2, fieldr1, field2r) {
-  var flip1 = field1r ? -1 : 1;
-  var flip2 = field2r ? -1 : 1;
-  return function lexSort(a,b) {
-    if(a[field1] > b[field1]) {
-      return 1*flip1;
-    } 
 
-    else if(a[field1] === b[field1]) {
-
-      if(a[field2] > b[field2]) {
-        return 1*flip2;
-      } 
-
-      else if (a[field2] === b[field2]) {
-        return 0;
-      } 
-
-      else {
-        return -1*flip2;
-      }
-
-    } else {
-      return -1*flip1;
-    }
-  }
-}
+ 
 //comperator ,    
 
 // var character  =  'Hunter';
