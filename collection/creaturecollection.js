@@ -3,7 +3,7 @@ var creaturecollection = Backbone.Collection.extend({
     
 })
 var hearthbasic = new creaturecollection();
-var groups = {'Hunter':[],'Druid':[],'Mage':[],'Shaman':[],'Rogue':[], 'Priest':[],'Warlock':[],'Warrior':[]}
+var groups = {'Hunter':[],'Druid':[],'Mage':[],'Shaman':[],'Rogue':[], 'Priest':[],'Warlock':[],'Warrior':[],'Neutral':[],'All':[]}
 console.log(groups['Hunter'])
 function createCollection(){
             $.each(groups, function(key,value){
@@ -13,7 +13,6 @@ function createCollection(){
         })
       }
        createCollection()
-       console.log(groups['Hunter'])
       $.ajax({
         dataType:'json',
         url:'http://localhost/hearthstone/script/AllSets.json',
@@ -35,6 +34,7 @@ function createCollection(){
 
 
            cardcreatureview.render();
+
 
        }  
          }

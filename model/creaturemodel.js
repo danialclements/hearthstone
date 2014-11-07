@@ -12,7 +12,7 @@ var hearthcreatures = Backbone.Model.extend({
     text:'',
     artist:'',
     collectible:'',
-    playerClass:'neutral',
+    playerClass:'Neutral',
     mechanics:[]
     },
     initialize: function(){
