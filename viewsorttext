@@ -1,0 +1,4 @@
+var compy = organize('cost','name') //defining fields for comparator
+cardcreatureview.collection.comparator=compy
+cardcreatureview.collection.sort()
+cardcreatureview.render()
