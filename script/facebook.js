@@ -1,6 +1,8 @@
 
   // This is called with the results from from FB.getLoginStatus().
 var user;
+var userinfo;
+var userobject;
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -79,6 +81,7 @@ var user;
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
          userinfo = JSON.stringify(response);
+         userobject = jQuery.parseJSON( userinfo );
         
     });
   }

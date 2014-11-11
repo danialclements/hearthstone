@@ -1,8 +1,8 @@
 <html>
 <head>
+  <script src='vendor/jquery-2.1.0.min.js' type='text/javascript'></script>
   <script src='script/facebook.js' type='text/javascript'></script>
 <link href= 'vendor/styles.css' rel='stylesheet'/>
-<script src='vendor/jquery-2.1.0.min.js' type='text/javascript'></script>
 <script src='vendor/underscore.js' type='text/javascript'></script>
 <script src='vendor/backbone.js' type='text/javascript'></script>
 <script id = 'listtemplate' type='text/template'>
@@ -32,7 +32,7 @@
 <script id = 'cardtemplate' type="text/template">
 <div>
 <ul class = 'tempul'>
-<% console.log(user) %>
+
  
 
 <li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
@@ -55,6 +55,9 @@
    <div id= "cards1"> </div>
 
 
+   <script>  $( document ).ready(function() {console.log('hello');});
+</script>
+
 </body>
 </script>
 <script src='model/creaturemodel.js' type='text/javascript'></script>
@@ -62,5 +65,6 @@
 <script src='view/creatureview.js'  type='text/javascript'></script>
 <script src='model/classmodel.js' type='text/javascript'></script>
 <script src='view/classview.js'  type='text/javascript'></script>
+<script src='model/usernavmodel.js' type='text/javascript'></script>
 
 </html>

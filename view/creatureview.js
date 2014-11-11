@@ -8,7 +8,12 @@ var creatureview = Backbone.View.extend({
     },
 
     addcards: function(){
-        console.log('hello')
+        var idcoll = event.target.id
+        if (user){
+            console.log('exists')
+        }else{
+            console.log('false')
+        }
     },
     render: function(){
         var self = this;
