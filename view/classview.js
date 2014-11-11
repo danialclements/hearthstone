@@ -35,14 +35,16 @@ searchsubmit['classvalue'] = event.target.value;
 },
 
 submitentry: function(){
-console.log('hello')
+if(userinfo != false){
+  console.log('eee')
+}
   var querysearch = organize(searchsubmit['firstvalue'],searchsubmit['secondvalue'])
   var classname = searchsubmit['classvalue'];
   var lowerclass = classname.toLowerCase();
-  var classcomparatar = eval("card"+lowerclass+"view.collection.comparator=querysearch");
-  var collectionsort =  eval("card"+lowerclass+"view.collection.sort()");
-  var viewplace = eval("card"+lowerclass+"view.render()");
- 
+  var classcomparatar = cardviews[lowerclass].collection.comparator=querysearch
+  var collectionsort =  cardviews[lowerclass].collection.sort()
+  var viewplace = cardviews[lowerclass].render()
+  
     
   },
 

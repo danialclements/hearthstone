@@ -1,3 +1,5 @@
+
+var x=10;
 var hearthcreatures = Backbone.Model.extend({
     defaults:{
     id:'',
@@ -14,9 +16,10 @@ var hearthcreatures = Backbone.Model.extend({
     collectible:'',
     playerClass:'Neutral',
     mechanics:[]
-    },
-    initialize: function(){
 
+},
+    initialize: function(){
+        console.log(userinfo)
     }
 
 })

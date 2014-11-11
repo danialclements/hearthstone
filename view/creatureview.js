@@ -1,7 +1,7 @@
 var creatureview = Backbone.View.extend({
     el:'#cards1',
     initialize: function(){
-        this.render()
+        
     },
     render: function(){
         var self = this;
@@ -15,46 +15,46 @@ var creatureview = Backbone.View.extend({
     },
     template:_.template($("#cardtemplate").html())
 });
-
-var cardcreatureview = new creatureview({
+var cardviews = {};
+cardviews.creature = new creatureview({
     collection: hearthbasic
  });
 
-var cardhunterview = new creatureview({
+cardviews.hunter = new creatureview({
     collection: groups['Hunter']
 });
 
-var carddruidview = new creatureview({
+cardviews.druid = new creatureview({
     collection: groups['Druid']
 });
 
-var cardmageview = new creatureview({
+cardviews.mage = new creatureview({
     collection: groups['Mage']
 });
 
-var cardshamanview = new creatureview({
+cardviews.shaman = new creatureview({
    collection: groups['Shaman']
 });
 
-var cardrogueview = new creatureview({
+cardviews.rogue = new creatureview({
 collection: groups['Rogue']
 });
 
-var cardpriestview = new creatureview({
+cardviews.priest = new creatureview({
    collection: groups['Priest']
 });
 
-var cardwarlockview = new creatureview({
+cardviews.warlock = new creatureview({
     collection: groups['Warlock']
 });
-var cardwarriorview = new creatureview({
+cardviews.warrior = new creatureview({
     collection: groups['Warrior']
 });
-var cardneutralview = new creatureview({
+cardviews.neutral = new creatureview({
     collection: groups['Neutral']
 });
 
-var cardallview = new creatureview({
+cardviews.all = new creatureview({
     collection: groups['Neutral']
 });
 

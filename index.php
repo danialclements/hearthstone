@@ -1,12 +1,13 @@
 <html>
 <head>
+  <script src='script/facebook.js' type='text/javascript'></script>
 <link href= 'vendor/styles.css' rel='stylesheet'/>
 <script src='vendor/jquery-2.1.0.min.js' type='text/javascript'></script>
 <script src='vendor/underscore.js' type='text/javascript'></script>
 <script src='vendor/backbone.js' type='text/javascript'></script>
 <script id = 'listtemplate' type='text/template'>
  <form action=""> Pick Class
- <% for(var i = 0; i < 10; i++ ){ %>
+ <% for(var i = 0; i < 10; i++ ){ console.log(userinfo) %>
  <input type="radio" name="hsclass" value= <%=classes1[i]%> ><%= classes1[i] %>
  <%} %>
 
@@ -27,22 +28,25 @@
 <button id = 'submit'> hello</button>
 
 </script>
+
 <script id = 'cardtemplate' type="text/template">
 <ul class = 'tempul'>
 <li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
 <li> <%= name %> </li>
+<% if (userinfo){%>
+  <div>hello </div>
+<%}%>
 </ul>
 </script>
 </head>
 <body>
 
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
+<div id="status">
 </div>
+
     <div id = "list"> </div>
    <div id= "cards1"> </div>
 
@@ -54,4 +58,5 @@
 <script src='view/creatureview.js'  type='text/javascript'></script>
 <script src='model/classmodel.js' type='text/javascript'></script>
 <script src='view/classview.js'  type='text/javascript'></script>
+
 </html>

@@ -1,3 +1,4 @@
+
 var creaturecollection = Backbone.Collection.extend({
     model: hearthcreatures,
     
@@ -41,7 +42,7 @@ function createCollection(){
 
 
 
-           cardcreatureview.render();
+           cardviews.all.render();
 
 
        }  
