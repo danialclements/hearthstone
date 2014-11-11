@@ -25,7 +25,7 @@
 <input type="radio" name="second" value="name2">Name
 
 </form>
-<button id = 'submit'> hello</button>
+<button id = 'submit'> button</button>
 
 </script>
 
@@ -33,7 +33,7 @@
 <ul class = 'tempul'>
 <li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
 <li> <%= name %> </li>
-<% if (userinfo){%>
+<% if (userinfo != undefined){%>
   <div>hello </div>
 <%}%>
 </ul>
