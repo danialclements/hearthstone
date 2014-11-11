@@ -10,8 +10,9 @@ var classview = Backbone.View.extend({
  events:{
 'click .navhearth' : 'switchcollection',
 'click  form': 'getvalues',
-'click  #submit' : 'submitentry'
+'click  #submit' : 'submitentry',
  },
+
 
 
 

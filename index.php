@@ -7,7 +7,7 @@
 <script src='vendor/backbone.js' type='text/javascript'></script>
 <script id = 'listtemplate' type='text/template'>
  <form action=""> Pick Class
- <% for(var i = 0; i < 10; i++ ){ console.log(userinfo) %>
+ <% for(var i = 0; i < 10; i++ ){ %>
  <input type="radio" name="hsclass" value= <%=classes1[i]%> ><%= classes1[i] %>
  <%} %>
 
@@ -30,13 +30,17 @@
 </script>
 
 <script id = 'cardtemplate' type="text/template">
+<div>
 <ul class = 'tempul'>
+<% console.log(user) %>
+ 
+
 <li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
 <li> <%= name %> </li>
-<% if (userinfo != undefined){%>
-  <div>hello </div>
-<%}%>
+<li id = '<%= id %> '> <%= button%></li>
+
 </ul>
+</div>
 </script>
 </head>
 <body>

@@ -3,6 +3,13 @@ var creatureview = Backbone.View.extend({
     initialize: function(){
         
     },
+    events:{
+       'click li': 'addcards' 
+    },
+
+    addcards: function(){
+        console.log('hello')
+    },
     render: function(){
         var self = this;
         var output = '';
