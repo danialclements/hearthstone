@@ -1,9 +1,4 @@
-
-  // This is called with the results from from FB.getLoginStatus().
-var user;
-var userinfo;
-var userobject;
-  function statusChangeCallback(response) {
+function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -82,7 +77,46 @@ var userobject;
         'Thanks for logging in, ' + response.name + '!';
          userinfo = JSON.stringify(response);
          userobject = jQuery.parseJSON( userinfo );
-        
-    });
-  }
-
+    var usernav = Backbone.Model.extend({
+      defaults:{
+      id:'',
+      email:'',
+      first_name:'',
+      gender:'',
+      last_name:'',
+      link:'',
+      locale:'',
+      name:'',
+      timezone:'',
+      update_time:'',
+      verified:'',
+      createdeck:'create deck'
+    }
+    })
+    loginobject = new usernav(userobject)
+    var usernavview = Backbone.View.extend({
+      el: '#usernavbar',
+      initialize: function(){
+        this.render()
+      },
+      events:
+      {
+       'click .createdeck':  'addtoo',
+       'click .createdeckbutton': 'createdeckhandler'
+      },
+      createdeckhandler: function(){
+        console.log('helo')
+        $('#status').empty();
+        $('.createdeckbutton').empty();
+      },
+      render: function(){
+        this.$el.html(this.template(this.model.toJSON()));
+      },
+      template:_.template($("#usernavtemplate").html())
+  })        
+  var usernavview1 = new usernavview({
+        model: loginobject
+  })
+         usernavview1.render();
+  });
+}

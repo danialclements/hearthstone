@@ -28,23 +28,27 @@
 <button id = 'submit'> button</button>
 
 </script>
+<script id = 'usernavtemplate' type="text/template">
+<ul>
+<li> <%= first_name %> <%= last_name %> </li>
+</ul>
 
+<button class = 'createdeckbutton'> <%=createdeck%> </button>
+</script>
 <script id = 'cardtemplate' type="text/template">
 <div>
 <ul class = 'tempul'>
-
- 
-
 <li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
 <li> <%= name %> </li>
-<li id = '<%= id %> '> <%= button%></li>
+<li id = '<%= id %> ' class='addcard'> <%= button%></li>
 
 </ul>
 </div>
 </script>
 </head>
 <body>
-
+<div id = 'usernavbar'>
+</div>
   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
@@ -55,7 +59,6 @@
    <div id= "cards1"> </div>
 
 
-   <script>  $( document ).ready(function() {console.log('hello');});
 </script>
 
 </body>
@@ -65,6 +68,6 @@
 <script src='view/creatureview.js'  type='text/javascript'></script>
 <script src='model/classmodel.js' type='text/javascript'></script>
 <script src='view/classview.js'  type='text/javascript'></script>
-<script src='model/usernavmodel.js' type='text/javascript'></script>
+
 
 </html>

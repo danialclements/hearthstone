@@ -65,7 +65,6 @@ if(userinfo != false){
 
 
 
-
     el: '#list',
     initialize: function(){
         this.render()

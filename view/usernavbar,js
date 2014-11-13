@@ -1,0 +1,8 @@
+var usernavview = Backbone.View.Extend({
+    el: #usernavbar,
+     render: function(){
+   this.$el.html(this.template(this.model.toJSON()));
+     
+    },
+     template:_.template($("#usernavtemplate).html())
+})

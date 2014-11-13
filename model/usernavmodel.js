@@ -1,4 +1,6 @@
+    var loginobject;
 var usernav = Backbone.Model.extend({
+   defaults: {
     id:'',
     email:'',
     first_name:'',
@@ -9,8 +11,10 @@ var usernav = Backbone.Model.extend({
     name:'',
     timezone:'',
     update_time:'',
-    verified:''
+    verified:'',
+    createdeck: 'create deck'
+    }
 })
-console.log(userobject)
-var loginobject = new usernav(userobject)
-console.log(loginobject);
+
+   loginobject = new usernav(userobject)
+         

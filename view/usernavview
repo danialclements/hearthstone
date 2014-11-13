@@ -1,0 +1,3 @@
+var usernavview = Backbone.View.Extend({
+    el: #usernavbar
+})

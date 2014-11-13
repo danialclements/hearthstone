@@ -10,7 +10,7 @@ var creatureview = Backbone.View.extend({
     addcards: function(){
         var idcoll = event.target.id
         if (user){
-            console.log('exists')
+            console.log(idcoll)
         }else{
             console.log('false')
         }
