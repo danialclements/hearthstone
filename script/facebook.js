@@ -1,3 +1,5 @@
+var cardcounter = 0;
+var buttoninfo = cardcounter + '/30' + ' Cards in Deck';
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -101,13 +103,15 @@ function statusChangeCallback(response) {
       },
       events:
       {
-       'click .createdeck':  'addtoo',
        'click .createdeckbutton': 'createdeckhandler'
       },
       createdeckhandler: function(){
         console.log('helo')
         $('#status').empty();
         $('.createdeckbutton').empty();
+        console.log(buttoninfo)
+        $('<p>'+buttoninfo+'</p>').appendTo('.createdeckbutton')
+
       },
       render: function(){
         this.$el.html(this.template(this.model.toJSON()));

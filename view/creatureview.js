@@ -1,20 +1,27 @@
+var user;
 var creatureview = Backbone.View.extend({
     el:'#cards1',
     initialize: function(){
         
     },
     events:{
-       'click li': 'addcards' 
+       'click .addcard': 'addcards' 
     },
 
     addcards: function(){
         var idcoll = event.target.id
         if (user){
-            console.log(idcoll)
+                cardcounter++;
+        console.log('hello')
+        $('.createdeckbutton').empty();
+        
+
         }else{
             console.log('false')
         }
     },
+
+
     render: function(){
         var self = this;
         var output = '';

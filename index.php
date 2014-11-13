@@ -36,14 +36,12 @@
 <button class = 'createdeckbutton'> <%=createdeck%> </button>
 </script>
 <script id = 'cardtemplate' type="text/template">
-<div>
 <ul class = 'tempul'>
-<li class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'  <
+<img class = 'templi'> <img src='http://wow.zamimg.com/images/hearthstone/cards/enus/original/<%=id %>.png'>
 <li> <%= name %> </li>
-<li id = '<%= id %> ' class='addcard'> <%= button%></li>
-
+<div id = '<%= id %> ' class='addcard'> <%= button%></div>
 </ul>
-</div>
+
 </script>
 </head>
 <body>
